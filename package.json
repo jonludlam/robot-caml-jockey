@@ -20,9 +20,12 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
+    "bs-node": "github:reasonml-community/bs-node",
+    "nodegit": "^0.24.1",
     "probot": "^7.2.0"
   },
   "devDependencies": {
+    "bs-platform": "^4.0.18",
     "jest": "^24.0.0",
     "nock": "^10.0.0",
     "nodemon": "^1.17.2",

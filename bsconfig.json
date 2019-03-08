@@ -1,0 +1,11 @@
+{
+  "name" : "robot-caml-jockey",
+  "refmt" : 3,
+  "reason": {"react-jsx": 2},
+  "bs-dependencies" : ["bs-node"],
+  "sources" : "src",
+  "package-specs" : {
+    "module" : "commonjs",
+    "in-source" : true
+  }
+}

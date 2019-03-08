@@ -4,10 +4,13 @@
  */
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
+const git = require('./src/Git');
 
 module.exports = app => {
   // Your code here
   app.log('Yay, the app was loaded!')
+
+  app.log(git.greet("me"))
 
   app.on('issues.opened', async context => {
     const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
@@ -28,6 +31,7 @@ module.exports = app => {
         text: 'This is the text'
       }
     }
+    app.log('payload = ' + JSON.stringify(context.payload))
 
     const result = await context.github.checks.create(context.repo(check_options))
     const id = result.data.id
