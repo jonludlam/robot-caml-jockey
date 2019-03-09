@@ -1,3 +1,3 @@
 
-let greet = (name) => "Hello " ++ name;
+let greet = (name) => "Hi " ++ name;
 

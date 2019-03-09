@@ -13,8 +13,8 @@
     "probot-app"
   ],
   "scripts": {
-    "dev": "nodemon",
-    "start": "probot run ./index.js",
+    "dev": "nodemon -e re,js",
+    "start": "bsb -make-world && probot run ./index.js",
     "lint": "standard --fix",
     "test": "jest && standard",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
@@ -41,10 +41,11 @@
     ]
   },
   "nodemonConfig": {
-    "exec": "npm start",
+    "exec": "bsb -make-world && npm start",
     "watch": [
       ".env",
-      "."
+      ".",
+      "src"
     ]
   },
   "jest": {
